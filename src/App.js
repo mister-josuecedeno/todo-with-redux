@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import AddTodo from './components/AddTodo/AddTodo';
@@ -6,14 +5,13 @@ import List from './components/List/List';
 
 function App({ username }) {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-
+    <>
+      <div className='container'>
+        <h1 className='title'>React-Redux Todo List</h1>
         <AddTodo />
         <List />
-      </header>
-    </div>
+      </div>
+    </>
   );
 }
 

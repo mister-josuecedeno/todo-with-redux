@@ -5,6 +5,7 @@ import { addTodo } from '../../actions';
 const AddTodo = (props) => (
   <>
     <form
+      className='form'
       onSubmit={(e) => {
         e.preventDefault();
 
@@ -13,8 +14,10 @@ const AddTodo = (props) => (
         e.target.userInput.value = '';
       }}
     >
-      <input type='text' name='userInput' />
-      <button>Submit</button>
+      <div className='form-group'>
+        <input className='input' type='text' name='userInput' />
+        <button className='btn'>Submit</button>
+      </div>
     </form>
   </>
 );

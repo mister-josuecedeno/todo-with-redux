@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { deleteTodo } from '../../actions';
 
 const List = (props) => (
-  <ul>
+  <ul className='todo-list'>
     {props.todos.map((todo, index) => (
-      <li key={index}>
+      <li className='todo-item' key={index}>
         <span>{todo.text}</span>
         <button onClick={() => props.dispatch(deleteTodo(todo.id))}>
           Delete
